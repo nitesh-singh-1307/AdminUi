@@ -9,12 +9,16 @@
         <entry key="..\:/kotlin project/NewsApplication/app/src/main/res/drawable-v24/ucrop_background_green_button.xml" value="0.19814814814814816" />
         <entry key="..\:/kotlin project/NewsApplication/app/src/main/res/drawable-v24/ucrop_background_pink_button.xml" value="0.13802083333333334" />
         <entry key="..\:/kotlin project/NewsApplication/app/src/main/res/drawable/cornor_details_radius.xml" value="0.1712962962962963" />
-        <entry key="..\:/kotlin project/NewsApplication/app/src/main/res/layout/activity_main.xml" value="0.152" />
-        <entry key="..\:/kotlin project/NewsApplication/app/src/main/res/layout/activity_news_details.xml" value="0.2" />
+        <entry key="..\:/kotlin project/NewsApplication/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/kotlin project/NewsApplication/app/src/main/res/layout/activity_news_details.xml" value="0.176" />
+        <entry key="..\:/kotlin project/NewsApplication/app/src/main/res/layout/activity_save_news_list.xml" value="0.176" />
+        <entry key="..\:/kotlin project/NewsApplication/app/src/main/res/layout/activity_saved.xml" value="0.176" />
         <entry key="..\:/kotlin project/NewsApplication/app/src/main/res/layout/dialog_app_loader.xml" value="0.2421875" />
         <entry key="..\:/kotlin project/NewsApplication/app/src/main/res/layout/header_toolbar_black.xml" value="0.1" />
+        <entry key="..\:/kotlin project/NewsApplication/app/src/main/res/layout/header_toolbar_save.xml" value="0.176" />
         <entry key="..\:/kotlin project/NewsApplication/app/src/main/res/layout/header_toolbar_white.xml" value="0.2421875" />
         <entry key="..\:/kotlin project/NewsApplication/app/src/main/res/layout/news_list_items.xml" value="0.23385416666666667" />
+        <entry key="..\:/kotlin project/NewsApplication/app/src/main/res/layout/news_save_list_items.xml" value="0.2" />
       </map>
     </option>
   </component>

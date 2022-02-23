@@ -1,16 +1,25 @@
 <resources>
     <string name="app_name">NewsApplication</string>
     <string name="str_no_notification">News</string>
+    <string name="str_save_notification">Save</string>
     <string name="str_type_country">Type country...</string>
-    <string name="str_selected_country">Get your profile to the front of the queue and be seen by more people in your area</string>
+    <string name="str_selected_country">Get your profile to the front of the queue and be seen by more people in your areasas dhaskjdhkajhsdjkhajksdhjkahsdk jahkjhwkjdajhdjas</string>
+    <string name="str_time_auth_name">Get your profile to the fro</string>
+    <string name="str_selected_details">Get your profile to the front of the queue and be seen by more people in your area,
+    Get your profile to the front of the queue and be seen by more people in your area,
+        Get your profile to the front of the queue and be seen by more people in your area,Get your profile to the front of the queue and be seen by more people in your area asdasfas
+    </string>
     <string name="str_read">Read</string>
+    <string name="str_protest">#protest</string>
     <string name="str_save">Save</string>
     <string name="alert">Alert</string>
+    <string name="str_todays">Today</string>
     <string name="ok">OK</string>
     <string name="userUnauthenticated">Your session is expired. Please login again.</string>
     <string name="no_internet">No Internet Connected</string>
     <string name="msg_no_internet">No Internet connection found. Check your connection try again.</string>
     <string name="something_went_wrong">Something went wrong</string>
     <string name="time_out">Response time out</string>
+    <string name="date_time">%1s - %2s</string>
 
 </resources>

@@ -12,7 +12,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory
 import retrofit2.http.GET
 
 interface IApiService1 : IBaseService {
-    @GET("everything?q=tesla&from=2022-01-03&sortBy=publishedAt&apiKey=fd21a6cdffa44b4188037d1a94175f65")
+    @GET("everything?q=tesla&from=2022-02-23&sortBy=publishedAt&apiKey=fd21a6cdffa44b4188037d1a94175f65")
     suspend fun getNationalityOptions(): Response<NewsModuls>
 
 

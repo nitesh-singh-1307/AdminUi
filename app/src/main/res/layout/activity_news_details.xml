@@ -13,14 +13,14 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="@dimen/_15sdp" />
+            app:layout_constraintGuide_begin="@dimen/_1sdp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/glEnd"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:orientation="vertical"
-            app:layout_constraintGuide_end="@dimen/_15sdp" />
+            app:layout_constraintGuide_end="@dimen/_1sdp" />
 
 
         <FrameLayout
@@ -32,17 +32,16 @@
             <ImageView
                 android:id="@+id/imgFront"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:src="@drawable/ic_placeholder"
+                android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <include
                 android:id="@+id/toolbar"
                 layout="@layout/header_toolbar_white" />
-
         </FrameLayout>
-
 
         <TextView
             android:id="@+id/tvtDatetime"
@@ -50,7 +49,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/graphic_regular"
             android:text="29-03-21"
-            android:textColor="@color/black"
+            android:padding="@dimen/_2sdp"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@id/ifFrame"
             app:layout_constraintStart_toStartOf="@id/glBegin"
             app:layout_constraintTop_toTopOf="@id/ifFrame" />
@@ -59,17 +59,22 @@
             android:id="@+id/tvtTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/graphic_regular"
+            android:fontFamily="@font/graphic_medium"
             android:text="@string/str_selected_country"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
+            android:padding="@dimen/_2sdp"
+            android:textSize="@dimen/_20sdp"
             app:layout_constraintEnd_toEndOf="@id/glEnd"
             app:layout_constraintStart_toStartOf="@id/glBegin"
-            app:layout_constraintTop_toBottomOf="@+id/tvtDatetime" />
+            app:layout_constraintTop_toBottomOf="@+id/tvtDatetime"
+            app:layout_constraintBottom_toTopOf="@+id/ivBackground"
+            />
 
         <View
             android:id="@+id/ivBackground"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
             android:background="@drawable/cornor_details_radius"
             app:layout_constraintEnd_toEndOf="@id/glEnd"
             app:layout_constraintStart_toStartOf="@id/glBegin"
@@ -77,20 +82,22 @@
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/imageProfile"
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:scaleType="centerCrop"
             android:src="@drawable/ic_placeholder"
-            android:scaleType="fitCenter"
-            app:riv_corner_radius="30dip"
-            app:riv_border_width="2dip"
-            app:riv_border_color="#333333"
-            app:riv_mutate_background="true"
-            app:riv_tile_mode="repeat"
-            app:riv_oval="true"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginStart="@dimen/_10sdp"
             app:layout_constraintStart_toStartOf="@id/glBegin"
             app:layout_constraintTop_toBottomOf="@+id/tvtTitle"
+            app:riv_border_color="#333333"
+            app:riv_corner_radius="@dimen/_4sdp"
+            app:riv_mutate_background="true"
+            app:riv_oval="false"
             />
 
         <TextView
@@ -98,27 +105,42 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/graphic_regular"
+            android:padding="@dimen/_2sdp"
+            android:textSize="@dimen/_11sdp"
             android:text="@string/str_selected_country"
             android:textColor="@color/black"
-            app:layout_constraintTop_toTopOf="@id/imageProfile"
             app:layout_constraintBottom_toBottomOf="@id/imageProfile"
-            app:layout_constraintStart_toEndOf="@+id/imageProfile"
             app:layout_constraintEnd_toStartOf="@+id/tvSave"
-            />
+            app:layout_constraintStart_toEndOf="@+id/imageProfile"
+            app:layout_constraintTop_toTopOf="@id/imageProfile" />
 
 
         <TextView
             android:id="@+id/tvSave"
             style="@style/ucrop_button_background"
             android:layout_width="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:background="@drawable/ucrop_background_green_button"
             android:text="@string/str_save"
-            app:layout_constraintTop_toTopOf="@id/imageProfile"
             app:layout_constraintBottom_toBottomOf="@id/imageProfile"
             app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintTop_toTopOf="@id/imageProfile" />
+
+        <TextView
+            android:id="@+id/tvtJobJd2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/_30sdp"
+            android:fontFamily="@font/graphic_regular"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/str_selected_details"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintStart_toStartOf="@id/glBegin"
+            app:layout_constraintTop_toBottomOf="@+id/imageProfile"
+            app:layout_constraintBottom_toBottomOf="parent"
             />
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

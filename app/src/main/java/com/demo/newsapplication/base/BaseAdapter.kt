@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
+import com.demo.newsapplication.models.Article
 
 
 abstract class BaseAdapter<VB : ViewDataBinding, T>(private var layout: Int) :

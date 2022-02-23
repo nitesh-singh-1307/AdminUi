@@ -7,6 +7,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import coil.ImageLoader
+import com.demo.newsapplication.data.database.AppDatabase
 import com.demo.newsapplication.data.database.repository.ChatRepository
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.ObsoleteCoroutinesApi
@@ -24,13 +25,12 @@ import java.util.*
 @ObsoleteCoroutinesApi
 class App : Application(), LifecycleObserver  {
 //    private lateinit var dao: AppDao
-//    val database by lazy { AppDatabase.getInstance(this.applicationContext) }
-//    val chatRepository by lazy { ChatRepository(database.chatDao()) }
+    val database by lazy { AppDatabase.getInstance(this.applicationContext) }
+    val chatRepository by lazy { ChatRepository(database.chatDao()) }
 //    private lateinit var payPalConfiguration: PayPalConfiguration
 
     companion object {
         private lateinit var mInstance: App
-
         @Synchronized
         fun getInstance(): App = mInstance
     }
@@ -43,6 +43,7 @@ class App : Application(), LifecycleObserver  {
         }
 
         Timber.plant(DebugTree())
+
 //        dao = database.getDao()
 //        startSocketService()
     }

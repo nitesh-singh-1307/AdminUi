@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.newslist.NewsActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/header_toolbar_save" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glBegin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/_15sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glEnd"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/_15sdp" />
+
+        <EditText
+            android:id="@+id/etSearchCountry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:autofillHints="Type country..."
+            android:background="@drawable/drawab_search_question"
+            android:drawableStart="@drawable/ic_search_black_line"
+            android:drawableEnd="@drawable/ic_filter_icon"
+            android:drawablePadding="@dimen/_15sdp"
+            android:elevation="10dp"
+            android:fontFamily="@font/graphic_regular"
+            android:hint="@string/str_type_country"
+            android:imeOptions="actionSearch"
+            android:inputType="textCapSentences"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/color_content_text"
+            android:textColorHint="@color/color_content_text"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintEnd_toEndOf="@+id/glEnd"
+            app:layout_constraintStart_toStartOf="@id/glBegin"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        <TextView
+            android:id="@+id/tvtSaveTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/str_todays"
+            android:fontFamily="@font/graphic_regular"
+            android:textSize="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/glBegin"
+            app:layout_constraintTop_toBottomOf="@+id/etSearchCountry"
+            />
+        <TextView
+            android:id="@+id/tvtSaveSee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/str_todays"
+            android:fontFamily="@font/graphic_regular"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintTop_toTopOf="@+id/tvtSaveTitle"
+            app:layout_constraintBottom_toBottomOf="@id/tvtSaveTitle"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintTop_toBottomOf="@+id/etSearchCountry"
+            />
+
+        <View
+            android:id="@+id/ivBackground"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cornor_details_radius"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintStart_toStartOf="@id/glBegin"
+            app:layout_constraintTop_toBottomOf="@id/tvtSaveTitle"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNotificationDetail"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintStart_toStartOf="@id/glBegin"
+            app:layout_constraintTop_toBottomOf="@id/tvtSaveTitle"
+            tools:itemCount="50"
+            tools:listitem="@layout/news_save_list_items" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

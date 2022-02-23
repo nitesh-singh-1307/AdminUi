@@ -16,7 +16,8 @@
 
     <style name="ucrop_button_background">
         <item name="android:layout_marginTop">@dimen/_20sdp</item>
-        <item name="android:layout_marginStart">@dimen/_60sdp</item>
+        <item name="android:layout_marginStart">@dimen/_40sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_40sdp</item>
         <item name="android:layout_marginBottom">@dimen/_20sdp</item>
         <item name="fontFamily">@font/graphic_regular</item>
         <item name="android:paddingStart">@dimen/_25sdp</item>
